@@ -32,6 +32,95 @@
 $ npm install
 ```
 
+# Geospatial Query System
+
+This README provides a detailed guide to setting up and implementing a Geospatial Query System using NestJS.
+
+---
+
+# 1. Initialize the NestJS Project
+
+To create a new NestJS project, run the following command:
+```bash
+$ nest new geospatial-query-system
+```
+
+> **Note:** Before initializing the project, install the NestJS CLI globally:
+```bash
+$ npm install -g @nestjs/cli
+```
+Navigate to the newly created directory:
+```bash
+$ cd geospatial-query-system
+```
+
+---
+
+# 2. Install Dependencies
+
+Install the required dependencies:
+```bash
+$ npm install @nestjs/mongoose mongoose @nestjs/swagger class-validator class-transformer
+```
+> These packages are essential for database interactions, API documentation, and request validation.
+
+---
+
+# 3. Configure MongoDB Connection
+
+Set up the MongoDB connection in the `src/app.module.ts` file
+
+---
+
+# 4. Creating Cities Module and Schema
+
+Generate the necessary components for the cities module:
+```bash
+$ nest generate module cities
+$ nest generate controller cities
+$ nest generate service cities
+```
+Define the schema in `src/cities/schemas/city.schema.ts`:
+
+---
+
+# 5. Creating Documents Module and Schema
+
+Generate the necessary components for the documents module:
+```bash
+$ nest generate module documents
+$ nest generate controller documents
+$ nest generate service documents
+```
+
+Define the schema in `src/documents/schemas/document.schema.ts`:
+
+---
+
+# 6. Implementing Cities Service
+
+Add business logic for managing cities in `src/cities/cities.service.ts`.
+
+---
+
+# 7. Implementing Documents Service
+
+Add business logic for managing documents in `src/documents/documents.service.ts`.
+
+---
+
+# 8. Controllers for Cities and Documents
+
+Define API endpoints in the respective controllers:
+- `src/cities/cities.controller.ts`
+- `src/documents/documents.controller.ts`
+
+---
+
+# 9. Add Swagger Integration
+
+Enable Swagger for API documentation in `src/main.ts`:
+
 ## Compile and run the project
 
 ```bash
