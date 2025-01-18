@@ -1,0 +1,13 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+      "outDir": "../dist/out-e2e",
+      "target": "ES2020",
+      "module": "CommonJS"
+    },
+    "include": [
+      "../src/**/*.ts",
+      "./**/*.ts"
+    ]
+  }
+  
